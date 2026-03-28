@@ -22,7 +22,7 @@ export function GreetingMatrixIntro({ title, onComplete }: Props) {
   const [count, setCount] = useState<3 | 2 | 1 | null>(null);
   const [wordVisible, setWordVisible] = useState(0);
   const [phase, setPhase] = useState<"boot" | "words" | "finale" | "out">("boot");
-  const [finaleLine, setFinaleLine] = useState(0);
+  // const [finaleLine, setFinaleLine] = useState(0);
   const [rainFade, setRainFade] = useState(1);
   const doneRef = useRef(false);
   const cancelledRef = useRef(false);
@@ -51,7 +51,7 @@ export function GreetingMatrixIntro({ title, onComplete }: Props) {
       setPhase("boot");
       setCount(null);
       setWordVisible(0);
-      setFinaleLine(0);
+      // setFinaleLine(0);
       setRainFade(1);
 
       await sleep(280);
@@ -81,9 +81,9 @@ export function GreetingMatrixIntro({ title, onComplete }: Props) {
       await sleep(420);
       setPhase("finale");
       await sleep(400);
-      setFinaleLine(1);
+      // setFinaleLine(1);
       await sleep(700);
-      setFinaleLine(2);
+      // setFinaleLine(2);
       await sleep(900);
       setRainFade(0.2);
       setPhase("out");
