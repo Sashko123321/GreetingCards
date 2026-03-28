@@ -9,7 +9,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history"
+    "deploy": "node deploy.js"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",
