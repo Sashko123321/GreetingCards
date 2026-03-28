@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply min-h-screen bg-stone-950;
+  }
+}
+
+.perspective-book {
+  perspective: 1600px;
+}
+
+.page-3d {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@keyframes shimmer-foil {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.card-foil-shimmer {
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 248, 220, 0.55) 50%,
+    rgba(255, 255, 255, 0.25) 55%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-foil 4.5s ease-in-out infinite;
+}
